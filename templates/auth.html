@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+  <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Регистрация</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='authstyle.css') }}">
+      
+  
+
+</head>
+<body>
+  
+  <div class="container">
+    
+    <p style="color: red; position: absolute; text-align: center; margin-top: -100px; margin-left: -20px;">{% if error %}Неправильный логин или пароль. Правильный прописан в readme{% endif %}</p>
+    <form method="POST" action="/auth">
+      
+      <p>Регистрация</p>
+      <input type="email" name="username" id="username" placeholder="Электронная почта" required><br>
+      <input type="password" name="password" id="password" placeholder="Пароль" required><br>
+      <input type="submit" value="Войти"><br>
+      <a href="#">Забыли пароль?</a>
+    </form>
+    <div class="drops">
+      <div class="drop drop-1"></div>
+      <div class="drop drop-2"></div>
+      <div class="drop drop-3"></div>
+      <div class="drop drop-4"></div>
+      <div class="drop drop-5"></div>
+    </div>
+  </div>
+</body>
+</html>

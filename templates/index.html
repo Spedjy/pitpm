@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header__info">
+            <div class="container">
+                <div class="row__header-info">
+                    <div class="header__info-left">
+                        <a class="header__logo" href="index.html">
+                        </a>
+                        <a class="header__mail" href="#">
+                            <span class="header__mail-text">
+                                <svg class="icon icon-mail">
+                                    <use xlink:href="sprite.svg#mail"></use>
+                                </svg>
+                                ПиТПМ
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header__info-right">
+                        <a class="header__phone" href="#">
+                            <span class="header__phone-text">
+                                <svg class="icon icon-phone">
+                                    <use xlink:href="sprite.svg#phone"></use>
+                                </svg>
+                               Александр Жирков
+                            </span>
+                        </a>
+                        <a href="#" class="header__call"><span class="header__call-text">ИСП-320П</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__menu">
+            <div class="container">
+                <div class="row__head-menu">
+                    <ul class="head__menu">
+                        <div class="dropdown">
+                            
+
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button><a href='http://localhost:3005/api/users'>GET(users)</a></button>
+                            <button><a href='http://localhost:3005/api/users'>POST(users)</a><br> </button>
+                            <button><a href='http://localhost:3005/api/users/0'>PUT(users)</a><br></button>
+                            <button><a href='http://localhost:3005/api/users/0'>DELETE(users)</a><br></button>
+                            <button><a href='http://localhost:3005/api/musics'>GET(music)</a><br></button>
+                            <button><a href='http://localhost:3005/api/musics'>POST(music)</a><br></button>
+                            <button><a href='http://localhost:3005/api/musics/0'>PUT(music)</a><br></button>
+                            <button><a href='http://localhost:3005/api/musics/0'>DELETE(music)</a><br></button>
+                            <button><a href='http://localhost:3005/api/books'>GET(books)</a><br></button>
+                            <button><a href='http://localhost:3005/api/books'>POST(books)</a><br></button>
+                            <button><a href='http://localhost:3005/api/books/0'>PUT(books)</a><br></button>
+                            <button><a href='http://localhost:3005/api/books/0'>DELETE(books) </a><br></button>
+                            <button><a href='http://localhost:3005/api/cars'>GET(cars)</a><br></button>
+                            <button><a href='http://localhost:3005/api/cars'>POST(cars)</a><br></button>
+                            <button><a href='http://localhost:3005/api/cars/0'>PUT(cars)</a><br></button>
+                            <button><a href='http://localhost:3005/api/cars/0'>DELETE(cars)</a><br></button>
+                        </div>  
+                    </ul>
+                </div>                          
+            </div>
+        </div>
+    </header>
+    <div class="reg">
+        <form name="regform" method="post" enctype="multipart/form-data" action="#">
+            <input type="text" name="firstName" id="firstName" placeholder="Фамилия">
+            <input type="text" name="surName" id="surName" placeholder="Имя">
+            <input type="text" name="Patronomyc" id="Patronomyc" placeholder="Отчество">
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <input type="password" name="pass" id="pass" placeholder="Пароль">
+            <p style="color:white;">Тут функционал еще не дописан, но всё что требовалось - сделал</p>
+
+        </form>
+    </div>
+</body>
+</html>
